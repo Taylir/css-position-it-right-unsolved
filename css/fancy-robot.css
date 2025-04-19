@@ -1,10 +1,49 @@
 .robot-container {
+  display: flex;
+  margin: auto;
 }
 
 .robot-face-shape {
+  height: 100px;
+  width: 100px;
+  border: 1px solid gold;
+  background-image: linear-gradient(
+    90deg,
+    rgba(200, 200, 0, 0.2),
+    rgba(0, 150, 150, 0.3)
+  );
+  width: 500px;
+  height: 500px;
+  border: 2px solid gold;
+  border-radius: 40px/50%;
 }
 
-.robot-eye-left {
+  .robot-eye-left {
+      position: relative;
+      width: 212px;
+      height: 100px;
+      box-sizing: content-box;
+      transform: scale(.5);
+    }
+    .robot-eye-left:before,
+    .robot-eye-left:after {
+      content: "";
+      box-sizing: content-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border: 20px solid red;
+      border-radius: 50px 50px 0 50px;
+      transform: rotate(-45deg);
+    }
+    .robot-eye-left:after {
+      left: auto;
+      right: 0;
+      border-radius: 50px 50px 50px 0;
+      transform: rotate(45deg);
+    }
 }
 
 .robot-eye-right {
@@ -26,6 +65,45 @@
 }
 
 .robot-hair-style {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+
+  box-shadow:
+    0 0 0 1em red,
+    0 1em 0 1em red,
+    -2.5em 1.5em 0 0.5em red,
+    2.5em 1.5em 0 0.5em red,
+    -3em -3em 0 0 red,
+    3em -3em 0 0 red,
+    -2em -2em 0 0 red,
+    2em -2em 0 0 red,
+    -3em -1em 0 0 red,
+    -2em -1em 0 0 red,
+    2em -1em 0 0 red,
+    3em -1em 0 0 red,
+    -4em 0 0 0 red,
+    -3em 0 0 0 red,
+    3em 0 0 0 red,
+    4em 0 0 0 red,
+    -5em 1em 0 0 red,
+    -4em 1em 0 0 red,
+    4em 1em 0 0 red,
+    5em 1em 0 0 red,
+    -5em 2em 0 0 red,
+    5em 2em 0 0 red,
+    -5em 3em 0 0 red,
+    -3em 3em 0 0 red,
+    3em 3em 0 0 red,
+    5em 3em 0 0 red,
+    -2em 4em 0 0 red,
+    -1em 4em 0 0 red,
+    1em 4em 0 0 red,
+    2em 4em 0 0 red;
+  background: red;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
 }
 
 .robot-hair-one {
